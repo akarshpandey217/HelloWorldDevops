@@ -13,6 +13,7 @@ namespace HelloWorldTest
         {
             string result = HelloWorld.Program.SimpleTestMethod("Hello", "World!");
             Assert.AreEqual(Expected, result);
+            Console.Write("Test Succeeded");
         }
     }
 }
