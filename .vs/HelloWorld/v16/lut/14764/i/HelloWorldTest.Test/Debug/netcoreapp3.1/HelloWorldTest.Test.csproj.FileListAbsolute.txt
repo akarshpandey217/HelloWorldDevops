@@ -1,0 +1,2 @@
+C:\Users\akarshpandey\source\repos\HelloWorld\.vs\HelloWorld\v16\lut\0\i\HelloWorldTest.Test\Debug\netcoreapp3.1\HelloWorldTest.Test.AssemblyInfoInputs.cache
+C:\Users\akarshpandey\source\repos\HelloWorld\.vs\HelloWorld\v16\lut\0\i\HelloWorldTest.Test\Debug\netcoreapp3.1\HelloWorldTest.Test.AssemblyInfo.cs

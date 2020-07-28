@@ -1,0 +1,69 @@
+[08:53:31.517 Verbose] - BuildManager - Some of the paths are absolute. This may prevent Live Unit Testing from building to the correct location.
+[08:53:31.517 Verbose] - BuildManager - Property BaseOutputPath evaluated to 'bin\' via:
+BaseOutputPath: 'bin\' @ C:\Program Files\dotnet\sdk\3.1.300\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.DefaultOutputPaths.targets:31
+[08:53:31.518 Verbose] - BuildManager - Property BaseIntermediateOutputPath evaluated to 'C:\Users\akarshpandey\source\repos\HelloWorld\HelloWorld\obj\' via:
+BaseIntermediateOutputPath: '$(MSBuildProjectDirectory)\$(BaseIntermediateOutputPath)' @ C:\Program Files\dotnet\sdk\3.1.300\Sdks\Microsoft.NET.Sdk.Publish\targets\Microsoft.NET.Sdk.Publish.targets:74
+  MSBuildProjectDirectory: 'C:\Users\akarshpandey\source\repos\HelloWorld\HelloWorld'
+  BaseIntermediateOutputPath: 'obj\' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Microsoft.Common.props:46
+[08:53:31.518 Verbose] - BuildManager - Property IntermediateOutputPath evaluated to 'obj\Debug\netcoreapp3.1\' via:
+IntermediateOutputPath: '$(IntermediateOutputPath)$(TargetFramework.ToLowerInvariant())\' @ C:\Program Files\dotnet\sdk\3.1.300\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.TargetFrameworkInference.targets:185
+  IntermediateOutputPath: '$(BaseIntermediateOutputPath)$(Configuration)\' @ C:\Program Files\dotnet\sdk\3.1.300\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.DefaultOutputPaths.targets:39
+    BaseIntermediateOutputPath: 'obj\' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Microsoft.Common.props:46
+    Configuration: 'Debug'
+[08:53:31.518 Verbose] - BuildManager - Property OutputPath evaluated to 'bin\Debug\netcoreapp3.1\' via:
+OutputPath: '$(OutputPath)$(TargetFramework.ToLowerInvariant())\' @ C:\Program Files\dotnet\sdk\3.1.300\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.TargetFrameworkInference.targets:186
+  OutputPath: '$(BaseOutputPath)$(Configuration)\' @ C:\Program Files\dotnet\sdk\3.1.300\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.DefaultOutputPaths.targets:33
+    BaseOutputPath: 'bin\' @ C:\Program Files\dotnet\sdk\3.1.300\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.DefaultOutputPaths.targets:31
+    Configuration: 'Debug'
+[08:53:31.518 Verbose] - BuildManager - Property OutDir evaluated to 'bin\Debug\netcoreapp3.1\' via:
+OutDir: '$(OutputPath)' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:193
+  OutputPath: '$(OutputPath)$(TargetFramework.ToLowerInvariant())\' @ C:\Program Files\dotnet\sdk\3.1.300\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.TargetFrameworkInference.targets:186
+    OutputPath: '$(BaseOutputPath)$(Configuration)\' @ C:\Program Files\dotnet\sdk\3.1.300\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.DefaultOutputPaths.targets:33
+      BaseOutputPath: 'bin\' @ C:\Program Files\dotnet\sdk\3.1.300\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.DefaultOutputPaths.targets:31
+      Configuration: 'Debug'
+[08:53:32.462 Verbose] - BuildManager - System.IO.FileNotFoundException: Could not find file 'C:\Users\akarshpandey\source\repos\HelloWorld\.vs\HelloWorld\v16\lut\0\b\HelloWorld\bin\Debug\netcoreapp3.1\HelloWorld.dll'.
+File name: 'C:\Users\akarshpandey\source\repos\HelloWorld\.vs\HelloWorld\v16\lut\0\b\HelloWorld\bin\Debug\netcoreapp3.1\HelloWorld.dll'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at Roslyn.Utilities.FileUtilities.OpenFileStream(String path)
+   at Microsoft.CodeAnalysis.MetadataReference.CreateFromFile(String path, MetadataReferenceProperties properties, DocumentationProvider documentation)
+   at Microsoft.CodeAnalysis.LiveUnitTesting.BuildManagement.CompilationComparer.TryGetReference(CommandLineReference commandLineReference, Logger logger, MetadataReference& reference)
+[08:53:32.629 Verbose] - BuildManager - C:\Users\akarshpandey\source\repos\HelloWorld\HelloWorldTest\UnitTest1.cs(14,29): error CS0103: The name 'HelloWorld' does not exist in the current context
+[08:53:32.636 Verbose] - BuildManager - Some of the file paths defined in the csproj under the Live Unit Testing build path are missing. Verify whether these files should be present under the Live Unit Testing build path and if necessary update the csproj definition to look these files up in a different place.
+[08:53:32.636 Verbose] - BuildManager - Item _OutputPathItem 'C:\Users\akarshpandey\source\repos\HelloWorld\.vs\HelloWorld\v16\lut\0\b\HelloWorldTest.Test\Debug\netcoreapp3.1\' evaluated via:
+_OutputPathItem: '$(OutDir)' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:272
+  OutDir: '$(OutputPath)' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:193
+    OutputPath: '$(OutputPath)$(TargetFramework.ToLowerInvariant())\' @ C:\Program Files\dotnet\sdk\3.1.300\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.TargetFrameworkInference.targets:186
+      OutputPath: '$(BaseOutputPath)$(Configuration)\' @ C:\Program Files\dotnet\sdk\3.1.300\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.DefaultOutputPaths.targets:33
+        BaseOutputPath: 'C:\Users\akarshpandey\source\repos\HelloWorld\.vs\HelloWorld\v16\lut\0\b\HelloWorldTest.Test\' @ C:\Users\akarshpandey\source\repos\HelloWorld\HelloWorldTest\HelloWorldTest.Test.csproj:0
+        Configuration: 'Debug'
+[08:53:32.637 Verbose] - BuildManager - Item AppConfigFileDestination 'C:\Users\akarshpandey\source\repos\HelloWorld\.vs\HelloWorld\v16\lut\0\b\HelloWorldTest.Test\Debug\netcoreapp3.1\HelloWorldTest.Test.dll.config' evaluated via:
+AppConfigFileDestination: '$(OutDir)$(TargetFileName).config' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:303
+  OutDir: '$(OutputPath)' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:193
+    OutputPath: '$(OutputPath)$(TargetFramework.ToLowerInvariant())\' @ C:\Program Files\dotnet\sdk\3.1.300\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.TargetFrameworkInference.targets:186
+      OutputPath: '$(BaseOutputPath)$(Configuration)\' @ C:\Program Files\dotnet\sdk\3.1.300\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.DefaultOutputPaths.targets:33
+        BaseOutputPath: 'C:\Users\akarshpandey\source\repos\HelloWorld\.vs\HelloWorld\v16\lut\0\b\HelloWorldTest.Test\' @ C:\Users\akarshpandey\source\repos\HelloWorld\HelloWorldTest\HelloWorldTest.Test.csproj:0
+        Configuration: 'Debug'
+  TargetFileName: '$(TargetName)$(TargetExt)' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:212
+    TargetName: '$(AssemblyName)' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:204
+      AssemblyName: '$(MSBuildProjectName)' @ C:\Program Files\dotnet\sdk\3.1.300\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.Sdk.props:32
+        MSBuildProjectName: 'HelloWorldTest.Test'
+    TargetExt: '.dll' @ C:\Program Files\dotnet\sdk\3.1.300\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.Sdk.BeforeCommon.targets:82
+[08:53:32.637 Verbose] - BuildManager - Item _DebugSymbolsOutputPath 'C:\Users\akarshpandey\source\repos\HelloWorld\.vs\HelloWorld\v16\lut\0\b\HelloWorldTest.Test\Debug\netcoreapp3.1\HelloWorldTest.Test.pdb' evaluated via:
+_DebugSymbolsOutputPath: '@(_DebugSymbolsIntermediatePath->'$(OutDir)%(Filename)%(Extension)')' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:372
+  OutDir: '$(OutputPath)' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:193
+    OutputPath: '$(OutputPath)$(TargetFramework.ToLowerInvariant())\' @ C:\Program Files\dotnet\sdk\3.1.300\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.TargetFrameworkInference.targets:186
+      OutputPath: '$(BaseOutputPath)$(Configuration)\' @ C:\Program Files\dotnet\sdk\3.1.300\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.DefaultOutputPaths.targets:33
+        BaseOutputPath: 'C:\Users\akarshpandey\source\repos\HelloWorld\.vs\HelloWorld\v16\lut\0\b\HelloWorldTest.Test\' @ C:\Users\akarshpandey\source\repos\HelloWorld\HelloWorldTest\HelloWorldTest.Test.csproj:0
+        Configuration: 'Debug'
+[08:53:32.637 Verbose] - BuildManager - Item _ApplicationManifestFinal 'C:\Users\akarshpandey\source\repos\HelloWorld\.vs\HelloWorld\v16\lut\0\b\HelloWorldTest.Test\Debug\netcoreapp3.1\Native.HelloWorldTest.Test.manifest' evaluated via:
+_ApplicationManifestFinal: '$(OutDir)$(_DeploymentTargetApplicationManifestFileName)' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:410
+  OutDir: '$(OutputPath)' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:193
+    OutputPath: '$(OutputPath)$(TargetFramework.ToLowerInvariant())\' @ C:\Program Files\dotnet\sdk\3.1.300\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.TargetFrameworkInference.targets:186
+      OutputPath: '$(BaseOutputPath)$(Configuration)\' @ C:\Program Files\dotnet\sdk\3.1.300\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.DefaultOutputPaths.targets:33
+        BaseOutputPath: 'C:\Users\akarshpandey\source\repos\HelloWorld\.vs\HelloWorld\v16\lut\0\b\HelloWorldTest.Test\' @ C:\Users\akarshpandey\source\repos\HelloWorld\HelloWorldTest\HelloWorldTest.Test.csproj:0
+        Configuration: 'Debug'
+  _DeploymentTargetApplicationManifestFileName: 'Native.$(AssemblyName).manifest' @ C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets:228
+    AssemblyName: '$(MSBuildProjectName)' @ C:\Program Files\dotnet\sdk\3.1.300\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.Sdk.props:32
+      MSBuildProjectName: 'HelloWorldTest.Test'
