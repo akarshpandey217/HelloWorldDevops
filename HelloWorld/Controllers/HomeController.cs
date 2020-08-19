@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using HelloWorld.Models;
+using Newtonsoft.Json;
 
 namespace HelloWorld.Controllers
 {
@@ -20,6 +21,19 @@ namespace HelloWorld.Controllers
 
         public IActionResult Index()
         {
+            Account account = new Account
+            {
+                Email = "james@example.com",
+                Active = true,
+                CreatedDate = DateTime.UtcNow,
+                Roles = new List<string>
+                {
+                    "User",
+                    "Admin"
+                }
+            };
+            string json = JsonConvert.SerializeObject(account, Formatting.Indented);
+            ViewData["Message"] = json;
             return View();
         }
 
